@@ -295,3 +295,11 @@ manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
 是无法连接 www.google.com 测试网络的。（已在github上提交Issues证实，Fixed at upstream.）
 
 目前解决方法：add 127.0.0.1 www.google.com to the /etc/hosts（我使用的127.0.0.2）
+
+## 21、KGet 不能加载插件
+
+插件加载器无法加载插件：`/usr/lib/qt/plugins/kget/kget_bittorrent.so。`  
+
+又是依赖包冲突没有解决好。  
+安装 libktorrent 2.1.1
+
