@@ -289,3 +289,9 @@ executing external native build for cmake 包路径/app/CMakeLists.txt
 > I experienced the same issue. Quite many of the other distributions often have outdated packages. They still use ncurses 5 instead of ncurses 6 (libtinfo seems to belong to ncurses). Assuming, that the android ndk's version of clang was built on such a system, it was worth a try to use ncurses 5. From the Arch User Repositories I was able to install the latest version of [ncurses5-compat-libs](https://aur.archlinux.org/packages/ncurses5-compat-libs/) (and I also installed the 32bit version: lib32-ncurses5-compat-libs). This solved the problem for me. If you have it installed already, try reinstalling or updating it, if it is outdated.
 
 manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
+
+## 20、octopi 0.8.12-2 无法连接网络 错误
+
+是无法连接 www.google.com 测试网络的。（已在github上提交Issues证实，Fixed at upstream.）
+
+目前解决方法：add 127.0.0.1 www.google.com to the /etc/hosts（我使用的127.0.0.2）
