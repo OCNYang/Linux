@@ -1,7 +1,6 @@
-# Linux
-开启 Linux 之行
+# Linux 之行
 
-# Manjaro 配置log
+> 在几经思量后，将电脑的 Window 10 + Ubuntu 16.04 双系统改成 Manjaro 单系统。在此记录下使用过程中遇到的坑坑洼洼...
 
 ## 1. 将本地数据包与远程数据包同步$  
 
