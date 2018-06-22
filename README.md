@@ -331,7 +331,7 @@ manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
 打开软件目录下的 `bin/idea64.vmoptions` 文件，添加以下内容 :  
 `-javaagent:/usr/share/java/jayatanaag.jar`
 
-#### 移除安装的包  
+### 移除安装的包  
 
 1. Remove previously appended line from `bin/idea64.vmoptions`.
 2. Remove Jayatana package:  
