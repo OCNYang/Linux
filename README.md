@@ -315,7 +315,7 @@ manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
 
 ### 步骤 2（以下方法选其一）
 
-* 方法１  
+#### 方法１  
 一次修改支持所有 jetbrains 系列开启全局菜单。  
 
   sudo gedit /etc/profile
@@ -326,12 +326,12 @@ manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
 
   source /etc/profile  
 
-* 方法２  
+#### 方法２  
 单独修改某软件目录下的. vmoptions 配置文件，只对该款软件有效。  
 打开软件目录下的 `bin/idea64.vmoptions` 文件，添加以下内容 :  
 `-javaagent:/usr/share/java/jayatanaag.jar`
 
-* 移除安装的包  
+#### 移除安装的包  
 
 1. Remove previously appended line from `bin/idea64.vmoptions`.
 2. Remove Jayatana package:  
