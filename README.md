@@ -309,22 +309,28 @@ manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
 ### 步骤 1  
 安装 Jayatana package :  
 
+```
   sudo add-apt-repository ppa:danjaredg/jayatana
   sudo apt-get update
   sudo apt-get install jayatana
+```
 
 ### 步骤 2（以下方法选其一）
 
 #### 方法１  
 一次修改支持所有 jetbrains 系列开启全局菜单。  
 
+```
   sudo gedit /etc/profile
+```
 
 添加 `export _JAVA_OPTIONS="-javaagent:/usr/share/java/jayatanaag.jar"`  
 
 更新修改的配置文件  
 
+```
   source /etc/profile  
+```
 
 #### 方法２  
 单独修改某软件目录下的. vmoptions 配置文件，只对该款软件有效。  
@@ -336,4 +342,7 @@ manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
 1. Remove previously appended line from `bin/idea64.vmoptions`.
 2. Remove Jayatana package:  
 
+```
   sudo apt-get --purge remove jayatana libjayatana libjayatanaag libjayatana-java libjayatanaag-java
+```
+
