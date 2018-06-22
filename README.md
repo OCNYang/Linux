@@ -302,3 +302,38 @@ manjaro(archlinux) 使用的是 ncurses,需要下载ncurses5-compat-libs
 又是依赖包冲突没有解决好。  
 安装 libktorrent 2.1.1
 
+## 22、ubuntu 下的 IDEA 如何实现全局菜单？
+
+链接：[知乎](https://www.zhihu.com/question/45535175/answer/104979742)
+
+### 步骤 1  
+安装 Jayatana package :  
+
+  sudo add-apt-repository ppa:danjaredg/jayatana
+  sudo apt-get update
+  sudo apt-get install jayatana
+
+### 步骤 2（以下方法选其一）
+
+* 方法１  
+一次修改支持所有 jetbrains 系列开启全局菜单。  
+
+  sudo gedit /etc/profile
+
+添加 `export _JAVA_OPTIONS="-javaagent:/usr/share/java/jayatanaag.jar"`  
+
+更新修改的配置文件  
+
+  source /etc/profile  
+
+* 方法２  
+单独修改某软件目录下的. vmoptions 配置文件，只对该款软件有效。  
+打开软件目录下的 `bin/idea64.vmoptions` 文件，添加以下内容 :  
+`-javaagent:/usr/share/java/jayatanaag.jar`
+
+* 移除安装的包  
+
+1. Remove previously appended line from `bin/idea64.vmoptions`.
+2. Remove Jayatana package:  
+
+  sudo apt-get --purge remove jayatana libjayatana libjayatanaag libjayatana-java libjayatanaag-java
